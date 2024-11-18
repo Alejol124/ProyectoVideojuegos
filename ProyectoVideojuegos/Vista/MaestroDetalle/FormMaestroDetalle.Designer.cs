@@ -35,7 +35,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblRecordatorio = new System.Windows.Forms.Label();
             this.tiendaJuegosDataSet1 = new ProyectoVideojuegos.TiendaJuegosDataSet1();
             this.prestamoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.prestamoTableAdapter = new ProyectoVideojuegos.TiendaJuegosDataSet1TableAdapters.PrestamoTableAdapter();
@@ -54,15 +53,15 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.prestamoBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.dgvPrestamo = new System.Windows.Forms.DataGridView();
-            this.cmbCliente = new System.Windows.Forms.ComboBox();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usuarioTableAdapter = new ProyectoVideojuegos.TiendaJuegosDataSet1TableAdapters.UsuarioTableAdapter();
-            this.fKPrestamoClient5BE2A6F2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.prestamoIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaPrestamoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaDevolucionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clienteIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.juegoIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fKPrestamoClient5BE2A6F2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cmbCliente = new System.Windows.Forms.ComboBox();
+            this.usuarioTableAdapter = new ProyectoVideojuegos.TiendaJuegosDataSet1TableAdapters.UsuarioTableAdapter();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -71,8 +70,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.prestamoBindingNavigator)).BeginInit();
             this.prestamoBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKPrestamoClient5BE2A6F2BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -128,19 +127,6 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // lblRecordatorio
-            // 
-            this.lblRecordatorio.AutoSize = true;
-            this.lblRecordatorio.BackColor = System.Drawing.Color.Transparent;
-            this.lblRecordatorio.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecordatorio.ForeColor = System.Drawing.Color.Black;
-            this.lblRecordatorio.Location = new System.Drawing.Point(1154, 203);
-            this.lblRecordatorio.Name = "lblRecordatorio";
-            this.lblRecordatorio.Size = new System.Drawing.Size(459, 50);
-            this.lblRecordatorio.TabIndex = 6;
-            this.lblRecordatorio.Text = "¡Recuerda que solo aparecerán los clientes\r\n que tienen un prestamo en este  mome" +
-    "nto!";
-            // 
             // tiendaJuegosDataSet1
             // 
             this.tiendaJuegosDataSet1.DataSetName = "TiendaJuegosDataSet1";
@@ -189,7 +175,7 @@
             this.prestamoBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.prestamoBindingNavigator.Name = "prestamoBindingNavigator";
             this.prestamoBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.prestamoBindingNavigator.Size = new System.Drawing.Size(1633, 27);
+            this.prestamoBindingNavigator.Size = new System.Drawing.Size(1633, 31);
             this.prestamoBindingNavigator.TabIndex = 7;
             this.prestamoBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -199,13 +185,13 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 28);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
             // 
@@ -215,7 +201,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorDeleteItem.Text = "Eliminar";
             // 
             // bindingNavigatorMoveFirstItem
@@ -224,7 +210,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
             // 
             // bindingNavigatorMovePreviousItem
@@ -233,13 +219,13 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -254,7 +240,7 @@
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -262,7 +248,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
             // 
             // bindingNavigatorMoveLastItem
@@ -271,20 +257,20 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveLastItem.Text = "Mover último";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // prestamoBindingNavigatorSaveItem
             // 
             this.prestamoBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.prestamoBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("prestamoBindingNavigatorSaveItem.Image")));
             this.prestamoBindingNavigatorSaveItem.Name = "prestamoBindingNavigatorSaveItem";
-            this.prestamoBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
+            this.prestamoBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 28);
             this.prestamoBindingNavigatorSaveItem.Text = "Guardar datos";
             this.prestamoBindingNavigatorSaveItem.Click += new System.EventHandler(this.prestamoBindingNavigatorSaveItem_Click_1);
             // 
@@ -306,35 +292,6 @@
             this.dgvPrestamo.RowTemplate.Height = 24;
             this.dgvPrestamo.Size = new System.Drawing.Size(1391, 395);
             this.dgvPrestamo.TabIndex = 7;
-            // 
-            // cmbCliente
-            // 
-            this.cmbCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(63)))));
-            this.cmbCliente.DataSource = this.usuarioBindingSource;
-            this.cmbCliente.DisplayMember = "Nombre";
-            this.cmbCliente.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(659, 213);
-            this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(468, 40);
-            this.cmbCliente.TabIndex = 8;
-            this.cmbCliente.DropDown += new System.EventHandler(this.cmbCliente_DropDown);
-            this.cmbCliente.DropDownClosed += new System.EventHandler(this.cmbCliente_DropDownClosed);
-            // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataMember = "Usuario";
-            this.usuarioBindingSource.DataSource = this.tiendaJuegosDataSet1;
-            // 
-            // usuarioTableAdapter
-            // 
-            this.usuarioTableAdapter.ClearBeforeFill = true;
-            // 
-            // fKPrestamoClient5BE2A6F2BindingSource
-            // 
-            this.fKPrestamoClient5BE2A6F2BindingSource.DataMember = "FK__Prestamo__Client__5BE2A6F2";
-            this.fKPrestamoClient5BE2A6F2BindingSource.DataSource = this.usuarioBindingSource;
             // 
             // prestamoIDDataGridViewTextBoxColumn
             // 
@@ -376,6 +333,36 @@
             this.juegoIDDataGridViewTextBoxColumn.Name = "juegoIDDataGridViewTextBoxColumn";
             this.juegoIDDataGridViewTextBoxColumn.Width = 125;
             // 
+            // fKPrestamoClient5BE2A6F2BindingSource
+            // 
+            this.fKPrestamoClient5BE2A6F2BindingSource.DataMember = "FK__Prestamo__Client__5BE2A6F2";
+            this.fKPrestamoClient5BE2A6F2BindingSource.DataSource = this.usuarioBindingSource;
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataMember = "Usuario";
+            this.usuarioBindingSource.DataSource = this.tiendaJuegosDataSet1;
+            // 
+            // cmbCliente
+            // 
+            this.cmbCliente.BackColor = System.Drawing.Color.White;
+            this.cmbCliente.DataSource = this.usuarioBindingSource;
+            this.cmbCliente.DisplayMember = "Nombre";
+            this.cmbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCliente.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.cmbCliente.FormattingEnabled = true;
+            this.cmbCliente.Location = new System.Drawing.Point(659, 213);
+            this.cmbCliente.Name = "cmbCliente";
+            this.cmbCliente.Size = new System.Drawing.Size(468, 40);
+            this.cmbCliente.TabIndex = 8;
+            this.cmbCliente.DropDown += new System.EventHandler(this.cmbCliente_DropDown);
+            this.cmbCliente.DropDownClosed += new System.EventHandler(this.cmbCliente_DropDownClosed);
+            // 
+            // usuarioTableAdapter
+            // 
+            this.usuarioTableAdapter.ClearBeforeFill = true;
+            // 
             // FormMaestroDetalle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -385,7 +372,6 @@
             this.Controls.Add(this.cmbCliente);
             this.Controls.Add(this.dgvPrestamo);
             this.Controls.Add(this.prestamoBindingNavigator);
-            this.Controls.Add(this.lblRecordatorio);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -403,8 +389,8 @@
             this.prestamoBindingNavigator.ResumeLayout(false);
             this.prestamoBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKPrestamoClient5BE2A6F2BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -416,7 +402,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblRecordatorio;
         private TiendaJuegosDataSet1 tiendaJuegosDataSet1;
         private System.Windows.Forms.BindingSource prestamoBindingSource;
         private TiendaJuegosDataSet1TableAdapters.PrestamoTableAdapter prestamoTableAdapter;

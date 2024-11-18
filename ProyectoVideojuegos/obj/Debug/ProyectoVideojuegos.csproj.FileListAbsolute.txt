@@ -40,3 +40,11 @@ C:\Users\Aleja\source\repos\ProyectoVideojuegos\ProyectoVideojuegos\obj\Debug\Pr
 C:\Users\Aleja\source\repos\ProyectoVideojuegos\ProyectoVideojuegos\obj\Debug\ProyectoVideojuegos.exe
 C:\Users\Aleja\source\repos\ProyectoVideojuegos\ProyectoVideojuegos\obj\Debug\ProyectoVideojuegos.pdb
 C:\Users\Aleja\source\repos\ProyectoVideojuegos\ProyectoVideojuegos\obj\Debug\ProyectoVideojuegos.Vista.FormNuevoJuego.resources
+C:\Users\Aleja\source\repos\ProyectoVideojuegos\ProyectoVideojuegos\obj\Debug\ProyectoVideojuegos.Vista.InicioParaRol.FormUsuario.resources
+C:\Users\Aleja\source\repos\ProyectoVideojuegos\ProyectoVideojuegos\obj\Debug\ProyectoVideojuegos.Vista.Crud.FormVideojuegos.resources
+C:\Users\Aleja\source\repos\ProyectoVideojuegos\ProyectoVideojuegos\obj\Debug\ProyectoVideojuegos.Vista.Prestamos.FormPrestar.resources
+C:\Users\Aleja\source\repos\ProyectoVideojuegos\ProyectoVideojuegos\obj\Debug\ProyectoVideojuegos.Vista.Crud.FormBusqueda.resources
+C:\Users\Aleja\source\repos\ProyectoVideojuegos\ProyectoVideojuegos\obj\Debug\ProyectoVideojuegos.Vista.Crud.FormPermisos.resources
+C:\Users\Aleja\source\repos\ProyectoVideojuegos\ProyectoVideojuegos\obj\Debug\ProyectoVideojuegos.Vista.Crud.FormVerUser.resources
+C:\Users\Aleja\source\repos\ProyectoVideojuegos\ProyectoVideojuegos\obj\Debug\ProyectoVideojuegos.Vista.Crud.FormActJuego.resources
+C:\Users\Aleja\source\repos\ProyectoVideojuegos\ProyectoVideojuegos\obj\Debug\ProyectoVideojuegos.Vista.Crud.FormElimJuego.resources

@@ -133,6 +133,9 @@
   <data name="ImgMaesDetalle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImgMaesDetalle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Icoweb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icoweb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="IcoCerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IcoCerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,9 +160,6 @@
   <data name="img2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CrearUs" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CrearUs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="IcoIngr" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IcoIngr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,8 +178,11 @@
   <data name="IconoSalir" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconoSalir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ElimJuego" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ElimJuego.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FondoAgJueg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FondoAgJueg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IcoArchivo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IcoArchivo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IcoPermisos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IcoPermisos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,11 +193,20 @@
   <data name="IconoIngresar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconoIngresar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ElimJuego" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ElimJuego.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FnAdmin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FnAdmin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="IcoCreUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IcoCreUser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconoActu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconoActu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IcoCerrarSes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IcoCerrarSes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IcoSalir" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IcoSalir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,19 +214,22 @@
   <data name="IcoLimp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IcoLimp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FnAdmin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FnAdmin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CrearUs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CrearUs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ImgDesarr" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImgDesarr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="IcoControl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IcoControl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconoHome" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconoHome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FondoAgJueg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FondoAgJueg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Icoweb1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icoweb1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IcoArchivo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IcoArchivo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ImgCambioRol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImgCambioRol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

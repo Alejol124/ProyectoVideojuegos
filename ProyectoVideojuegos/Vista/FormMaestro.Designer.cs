@@ -33,14 +33,15 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tsInicio = new System.Windows.Forms.ToolStripMenuItem();
             this.tsConsulta = new System.Windows.Forms.ToolStripMenuItem();
-            this.porCódigoNombreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.todosLosJuegosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsNombCod = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsTodosJuegos = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsVerUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.tsActualizar = new System.Windows.Forms.ToolStripMenuItem();
             this.tsIngresarJuego = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarJuegoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsActJuego = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsElimJuego = new System.Windows.Forms.ToolStripMenuItem();
             this.tsPermisos = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsPer = new System.Windows.Forms.ToolStripMenuItem();
             this.tsMaestro = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.smPrestaUsuarios = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,8 +49,9 @@
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.tsJuegDesarr = new System.Windows.Forms.ToolStripMenuItem();
             this.tsPrestamo = new System.Windows.Forms.ToolStripMenuItem();
-            this.prestarJuegoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.entregarJuegoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsPrestarJ = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsEntregarJ = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsWeb = new System.Windows.Forms.ToolStripMenuItem();
             this.tsCerrarSes = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlPrincipal = new System.Windows.Forms.Panel();
@@ -79,6 +81,7 @@
             this.tsPermisos,
             this.tsMaestro,
             this.tsPrestamo,
+            this.tsWeb,
             this.tsCerrarSes,
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -93,42 +96,55 @@
             this.tsInicio.Image = global::ProyectoVideojuegos.Properties.Resources.iconoHome;
             this.tsInicio.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.tsInicio.Name = "tsInicio";
-            this.tsInicio.Size = new System.Drawing.Size(101, 29);
-            this.tsInicio.Text = "Inicio";
+            this.tsInicio.Size = new System.Drawing.Size(53, 29);
+            this.tsInicio.Text = " ";
             this.tsInicio.Click += new System.EventHandler(this.tsInicio_Click);
             // 
             // tsConsulta
             // 
             this.tsConsulta.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.porCódigoNombreToolStripMenuItem,
-            this.todosLosJuegosToolStripMenuItem});
+            this.tsNombCod,
+            this.tsTodosJuegos,
+            this.tsVerUsuario});
             this.tsConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.tsConsulta.Image = global::ProyectoVideojuegos.Properties.Resources.iconoBuscar;
             this.tsConsulta.Name = "tsConsulta";
             this.tsConsulta.Size = new System.Drawing.Size(218, 29);
             this.tsConsulta.Text = "Consultar Juegos";
             // 
-            // porCódigoNombreToolStripMenuItem
+            // tsNombCod
             // 
-            this.porCódigoNombreToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(63)))));
-            this.porCódigoNombreToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.porCódigoNombreToolStripMenuItem.Name = "porCódigoNombreToolStripMenuItem";
-            this.porCódigoNombreToolStripMenuItem.Size = new System.Drawing.Size(294, 30);
-            this.porCódigoNombreToolStripMenuItem.Text = "Por Código/Nombre";
-            // todosLosJuegosToolStripMenuItem
+            this.tsNombCod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(63)))));
+            this.tsNombCod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.tsNombCod.Name = "tsNombCod";
+            this.tsNombCod.Size = new System.Drawing.Size(294, 30);
+            this.tsNombCod.Text = "Por Código/Nombre";
+            this.tsNombCod.Click += new System.EventHandler(this.tsNombCod_Click);
             // 
-            this.todosLosJuegosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(63)))));
-            this.todosLosJuegosToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.todosLosJuegosToolStripMenuItem.Name = "todosLosJuegosToolStripMenuItem";
-            this.todosLosJuegosToolStripMenuItem.Size = new System.Drawing.Size(294, 30);
-            this.todosLosJuegosToolStripMenuItem.Text = "Todos los Juegos";
+            // tsTodosJuegos
+            // 
+            this.tsTodosJuegos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(63)))));
+            this.tsTodosJuegos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.tsTodosJuegos.Name = "tsTodosJuegos";
+            this.tsTodosJuegos.Size = new System.Drawing.Size(294, 30);
+            this.tsTodosJuegos.Text = "Todos los Juegos";
+            this.tsTodosJuegos.Click += new System.EventHandler(this.tsTodosJuegos_Click);
+            // 
+            // tsVerUsuario
+            // 
+            this.tsVerUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(63)))));
+            this.tsVerUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.tsVerUsuario.Name = "tsVerUsuario";
+            this.tsVerUsuario.Size = new System.Drawing.Size(294, 30);
+            this.tsVerUsuario.Text = "Ver Usuarios";
+            this.tsVerUsuario.Click += new System.EventHandler(this.tsVerUsuario_Click);
             // 
             // tsActualizar
             // 
             this.tsActualizar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsIngresarJuego,
-            this.toolStripMenuItem3,
-            this.eliminarJuegoToolStripMenuItem});
+            this.tsActJuego,
+            this.tsElimJuego});
             this.tsActualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.tsActualizar.Image = global::ProyectoVideojuegos.Properties.Resources.iconoActu;
             this.tsActualizar.Name = "tsActualizar";
@@ -144,39 +160,42 @@
             this.tsIngresarJuego.Text = "Ingresar juego";
             this.tsIngresarJuego.Click += new System.EventHandler(this.tsIngresarJuego_Click);
             // 
-            // toolStripMenuItem3
+            // tsActJuego
             // 
-            this.toolStripMenuItem3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(63)))));
-            this.toolStripMenuItem3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(264, 30);
-            this.toolStripMenuItem3.Text = "Actualizar Juego";
+            this.tsActJuego.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(63)))));
+            this.tsActJuego.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.tsActJuego.Name = "tsActJuego";
+            this.tsActJuego.Size = new System.Drawing.Size(264, 30);
+            this.tsActJuego.Text = "Actualizar Juego";
+            this.tsActJuego.Click += new System.EventHandler(this.tsActJuego_Click);
             // 
-            // eliminarJuegoToolStripMenuItem
+            // tsElimJuego
             // 
-            this.eliminarJuegoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(63)))));
-            this.eliminarJuegoToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.eliminarJuegoToolStripMenuItem.Name = "eliminarJuegoToolStripMenuItem";
-            this.eliminarJuegoToolStripMenuItem.Size = new System.Drawing.Size(264, 30);
-            this.eliminarJuegoToolStripMenuItem.Text = "Eliminar Juego";
+            this.tsElimJuego.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(63)))));
+            this.tsElimJuego.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.tsElimJuego.Name = "tsElimJuego";
+            this.tsElimJuego.Size = new System.Drawing.Size(264, 30);
+            this.tsElimJuego.Text = "Eliminar Juego";
+            this.tsElimJuego.Click += new System.EventHandler(this.tsElimJuego_Click);
             // 
             // tsPermisos
             // 
             this.tsPermisos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem4});
+            this.tsPer});
             this.tsPermisos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.tsPermisos.Image = global::ProyectoVideojuegos.Properties.Resources.IcoPermisos;
             this.tsPermisos.Name = "tsPermisos";
             this.tsPermisos.Size = new System.Drawing.Size(136, 29);
             this.tsPermisos.Text = "Permisos";
             // 
-            // toolStripMenuItem4
+            // tsPer
             // 
-            this.toolStripMenuItem4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(63)))));
-            this.toolStripMenuItem4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(279, 30);
-            this.toolStripMenuItem4.Text = "Cambiar Permisos";
+            this.tsPer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(63)))));
+            this.tsPer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.tsPer.Name = "tsPer";
+            this.tsPer.Size = new System.Drawing.Size(279, 30);
+            this.tsPer.Text = "Cambiar Permisos";
+            this.tsPer.Click += new System.EventHandler(this.tsPer_Click);
             // 
             // tsMaestro
             // 
@@ -240,29 +259,39 @@
             // tsPrestamo
             // 
             this.tsPrestamo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.prestarJuegoToolStripMenuItem,
-            this.entregarJuegoToolStripMenuItem});
+            this.tsPrestarJ,
+            this.tsEntregarJ});
             this.tsPrestamo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.tsPrestamo.Image = global::ProyectoVideojuegos.Properties.Resources.IcoPrestamos;
             this.tsPrestamo.Name = "tsPrestamo";
             this.tsPrestamo.Size = new System.Drawing.Size(150, 29);
             this.tsPrestamo.Text = "Prestamos";
             // 
-            // prestarJuegoToolStripMenuItem
+            // tsPrestarJ
             // 
-            this.prestarJuegoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(63)))));
-            this.prestarJuegoToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.prestarJuegoToolStripMenuItem.Name = "prestarJuegoToolStripMenuItem";
-            this.prestarJuegoToolStripMenuItem.Size = new System.Drawing.Size(251, 30);
-            this.prestarJuegoToolStripMenuItem.Text = "Prestar Juego";
+            this.tsPrestarJ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(63)))));
+            this.tsPrestarJ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.tsPrestarJ.Name = "tsPrestarJ";
+            this.tsPrestarJ.Size = new System.Drawing.Size(251, 30);
+            this.tsPrestarJ.Text = "Prestar Juego";
+            this.tsPrestarJ.Click += new System.EventHandler(this.tsPrestarJ_Click);
             // 
-            // entregarJuegoToolStripMenuItem
+            // tsEntregarJ
             // 
-            this.entregarJuegoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(63)))));
-            this.entregarJuegoToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.entregarJuegoToolStripMenuItem.Name = "entregarJuegoToolStripMenuItem";
-            this.entregarJuegoToolStripMenuItem.Size = new System.Drawing.Size(251, 30);
-            this.entregarJuegoToolStripMenuItem.Text = "Entregar Juego";
+            this.tsEntregarJ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(63)))));
+            this.tsEntregarJ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.tsEntregarJ.Name = "tsEntregarJ";
+            this.tsEntregarJ.Size = new System.Drawing.Size(251, 30);
+            this.tsEntregarJ.Text = "Entregar Juego";
+            // 
+            // tsWeb
+            // 
+            this.tsWeb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.tsWeb.Image = global::ProyectoVideojuegos.Properties.Resources.Icoweb;
+            this.tsWeb.Name = "tsWeb";
+            this.tsWeb.Size = new System.Drawing.Size(139, 29);
+            this.tsWeb.Text = "Pag. Web";
+            this.tsWeb.Click += new System.EventHandler(this.tsWeb_Click);
             // 
             // tsCerrarSes
             // 
@@ -402,11 +431,11 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tsInicio;
         private System.Windows.Forms.ToolStripMenuItem tsConsulta;
-        private System.Windows.Forms.ToolStripMenuItem porCódigoNombreToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem todosLosJuegosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsNombCod;
+        private System.Windows.Forms.ToolStripMenuItem tsTodosJuegos;
         private System.Windows.Forms.ToolStripMenuItem tsPrestamo;
-        private System.Windows.Forms.ToolStripMenuItem prestarJuegoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem entregarJuegoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsPrestarJ;
+        private System.Windows.Forms.ToolStripMenuItem tsEntregarJ;
         private System.Windows.Forms.ToolStripMenuItem tsCerrarSes;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.Panel pnlSup;
@@ -419,15 +448,17 @@
         private System.Windows.Forms.Timer timerHora;
         private System.Windows.Forms.ToolStripMenuItem tsActualizar;
         private System.Windows.Forms.ToolStripMenuItem tsIngresarJuego;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem eliminarJuegoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsActJuego;
+        private System.Windows.Forms.ToolStripMenuItem tsElimJuego;
         private System.Windows.Forms.ToolStripMenuItem tsPermisos;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem tsPer;
         private System.Windows.Forms.ToolStripMenuItem tsMaestro;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
         private System.Windows.Forms.ToolStripMenuItem smPrestaUsuarios;
         private System.Windows.Forms.ToolStripMenuItem tsJuegoDesar;
         private System.Windows.Forms.ToolStripMenuItem tsJuegDesarr;
+        private System.Windows.Forms.ToolStripMenuItem tsWeb;
+        private System.Windows.Forms.ToolStripMenuItem tsVerUsuario;
     }
 }

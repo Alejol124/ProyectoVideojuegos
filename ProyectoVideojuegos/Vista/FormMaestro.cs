@@ -1,11 +1,14 @@
 ﻿using ProyectoVideojuegos.Controlador;
 using ProyectoVideojuegos.Modelo;
+using ProyectoVideojuegos.Vista.Crud;
 using ProyectoVideojuegos.Vista.InicioParaRol;
 using ProyectoVideojuegos.Vista.MaestroDetalle;
+using ProyectoVideojuegos.Vista.Prestamos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Security.Principal;
@@ -33,20 +36,19 @@ namespace ProyectoVideojuegos.Vista
         //Aquí Verificamos que rol posee el usuario
         private void FormMaestro_Load(object sender, EventArgs e)
         {
-            General.CargarForm(new FormAdmin(), pnlPrincipal);
+            //General.CargarForm(new FormUsuario(), pnlPrincipal);
             if (General.rol == "1")
             {
-                MessageBox.Show("Bienvenido Cliente");
                 tsPermisos.Visible = false;
                 tsMaestro.Visible = false;
-                General.CargarForm(new FormAdmin(), pnlPrincipal);
-                tsInicio.Enabled = false;
+                tsActualizar.Visible = false;
+                tsEntregarJ.Visible = false;
+                tsVerUsuario.Visible = false;
+                General.CargarForm(new FormUsuario(), pnlPrincipal);
             }
             else if (General.rol == "2")
             {
-                MessageBox.Show("Bienvenido Admin");
                 General.CargarForm(new FormAdmin(), pnlPrincipal);
-                tsInicio.Enabled = false;
             }
         }
 
@@ -66,7 +68,7 @@ namespace ProyectoVideojuegos.Vista
         {
             if (General.rol == "1")
             {
-                General.CargarForm(new FormAdmin(), pnlPrincipal);
+                General.CargarForm(new FormUsuario(), pnlPrincipal);
             }
             else if (General.rol == "2")
             {
@@ -92,9 +94,50 @@ namespace ProyectoVideojuegos.Vista
             General.CargarForm(new FormVistaJu(), pnlPrincipal);
         }
 
+        //Nuevo Juego para ingresar
         private void tsIngresarJuego_Click(object sender, EventArgs e)
         {
             General.CargarForm(new FormNuevoJuego(), pnlPrincipal);
+        }
+
+        private void tsWeb_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://localhost:57312/");
+        }
+
+        private void tsTodosJuegos_Click(object sender, EventArgs e)
+        {
+            General.CargarForm(new FormVideojuegos(), pnlPrincipal);
+        }
+
+        private void tsPrestarJ_Click(object sender, EventArgs e)
+        {
+            General.CargarForm(new FormPrestar(), pnlPrincipal);
+        }
+
+        private void tsNombCod_Click(object sender, EventArgs e)
+        {
+            General.CargarForm(new FormBusqueda(),pnlPrincipal);
+        }
+
+        private void tsPer_Click(object sender, EventArgs e)
+        {
+            General.CargarForm(new FormPermisos(), pnlPrincipal);
+        }
+
+        private void tsVerUsuario_Click(object sender, EventArgs e)
+        {
+            General.CargarForm(new FormVerUser(), pnlPrincipal);
+        }
+
+        private void tsActJuego_Click(object sender, EventArgs e)
+        {
+            General.CargarForm(new FormActJuego(), pnlPrincipal);
+        }
+
+        private void tsElimJuego_Click(object sender, EventArgs e)
+        {
+            General.CargarForm(new FormElimJuego(), pnlPrincipal);
         }
     }
 }

@@ -100,17 +100,59 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TiendaJuegosDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Crud\FormActJuego.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Crud\FormActJuego.Designer.cs">
+      <DependentUpon>FormActJuego.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Crud\FormBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Crud\FormBusqueda.Designer.cs">
+      <DependentUpon>FormBusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Crud\FormElimJuego.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Crud\FormElimJuego.Designer.cs">
+      <DependentUpon>FormElimJuego.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Crud\FormNuevoJuego.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\Crud\FormNuevoJuego.Designer.cs">
       <DependentUpon>FormNuevoJuego.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Crud\FormPermisos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Crud\FormPermisos.Designer.cs">
+      <DependentUpon>FormPermisos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Crud\FormVerUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Crud\FormVerUser.Designer.cs">
+      <DependentUpon>FormVerUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Crud\FormVideojuegos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Crud\FormVideojuegos.Designer.cs">
+      <DependentUpon>FormVideojuegos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\InicioParaRol\FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\InicioParaRol\FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\InicioParaRol\FormUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\InicioParaRol\FormUsuario.Designer.cs">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\InicioSesion\FormCrearUser.cs">
       <SubType>Form</SubType>
@@ -162,11 +204,38 @@
     <Compile Include="Vista\MuestraJuego.Designer.cs">
       <DependentUpon>MuestraJuego.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Prestamos\FormPrestar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Prestamos\FormPrestar.Designer.cs">
+      <DependentUpon>FormPrestar.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Vista\Crud\FormActJuego.resx">
+      <DependentUpon>FormActJuego.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Crud\FormBusqueda.resx">
+      <DependentUpon>FormBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Crud\FormElimJuego.resx">
+      <DependentUpon>FormElimJuego.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Crud\FormNuevoJuego.resx">
       <DependentUpon>FormNuevoJuego.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Crud\FormPermisos.resx">
+      <DependentUpon>FormPermisos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Crud\FormVerUser.resx">
+      <DependentUpon>FormVerUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Crud\FormVideojuegos.resx">
+      <DependentUpon>FormVideojuegos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\InicioParaRol\FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\InicioParaRol\FormUsuario.resx">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\InicioSesion\FormCrearUser.resx">
       <DependentUpon>FormCrearUser.cs</DependentUpon>
@@ -196,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\MuestraJuego.resx">
       <DependentUpon>MuestraJuego.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Prestamos\FormPrestar.resx">
+      <DependentUpon>FormPrestar.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -243,6 +315,9 @@
     <None Include="Resources\TituloEmpresa.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ImgCambioRol.png" />
+    <None Include="Resources\Icoweb1.png" />
+    <None Include="Resources\Icoweb.png" />
     <None Include="Resources\ImgDesarr.png" />
     <None Include="Resources\ImgMaesDetalle.png" />
     <None Include="Resources\PrestarJuego.png" />
@@ -262,6 +337,8 @@
     <None Include="Resources\FondoAgJueg.png" />
     <None Include="Resources\IcoLimp.png" />
     <None Include="Resources\IcoArchivo.png" />
+    <None Include="Resources\IcoCerrarSes.png" />
+    <None Include="Resources\IcoControl.png" />
     <Content Include="Resources\iconologin.ico" />
   </ItemGroup>
   <ItemGroup>

@@ -11,16 +11,19 @@ namespace ProyectoVideojuegos.Controlador
         private string nombreusuario;
         private string clave;
         private int rolid;
+        private string documento;
 
-        public Usuarios(string usuario, string clave, int rolid)
+        public Usuarios(string usuario, string clave, int rolid, string documento)
         {
             this.nombreusuario = usuario;
             this.clave = clave;
             this.rolid = rolid;
+            this.documento = documento;
         }
 
         public string NombreUsuario { get => nombreusuario; set => nombreusuario = value; }
         public string Clave { get => clave; set => clave = value; }
         public int RolID { get => rolid; set => rolid = value; }
+        public string Documento { get => documento; set => documento = value; }
     }
 }

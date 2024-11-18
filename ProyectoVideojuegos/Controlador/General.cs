@@ -21,6 +21,8 @@ namespace ProyectoVideojuegos.Controlador
         public static int confirmar;
         //Validar que nuestra api esté en funcionamiento
         public static int ApiOK;
+        //Docuemnto para relacionarlo a los prestamos
+        public static string documento;
 
         //Método par cargar Form en el panel principal (MENU MDI)
         public static void CargarForm(Form formulario, Panel pnPrincipal)
@@ -47,7 +49,7 @@ namespace ProyectoVideojuegos.Controlador
                     if (usuario == respuesta[i].NombreUsuario.ToString() && clave == respuesta[i].Clave.ToString())
                     {
                         rol = respuesta[i].RolID.ToString();
-                        MessageBox.Show("Rol: " + rol);
+                        documento = respuesta[i].Documento.ToString();
                         return;
                     }
                 }
@@ -134,12 +136,106 @@ namespace ProyectoVideojuegos.Controlador
                 SqlCommand comando = new SqlCommand(query, DB.conexion);
                 comando.Parameters.Add("@Caratula", System.Data.SqlDbType.VarBinary).Value = imagen;
                 int bandera = comando.ExecuteNonQuery();
-                if (bandera > 0) {
-                    MessageBox.Show("Registro Exitoso");
+                if (bandera > 0)
+                {
+                    MessageBox.Show("Registro Exitoso", "¡Nuevo Juego!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Valio verga");
+                    MessageBox.Show("");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+            finally
+            {
+                DB.cerrar(DB.conexion);
+            }
+        }
+        //Convertir imagen de la bd a la app
+        public static Image ConvertirDeBDaApp(byte[] binarios)
+        {
+            using (MemoryStream ms = new MemoryStream(binarios))
+            {
+                return Image.FromStream(ms);
+            }
+        }
+
+        //Cargar juegos al panel
+        public static void CargarJuegoPanel(FlowLayoutPanel flp, string query)
+        {
+            DB.CargarJuegosDesdeBD(flp, query);
+        }
+
+        //Registro nuevo prestamo
+        public static int NuevoPrestamo(string fecPrest, string fecDev, string documento, ComboBox cmbjuego)
+        {
+            int registroID = 0;
+            return registroID = DB.InsertarPrestamo(fecPrest, fecDev, documento, cmbjuego);
+        }
+
+        //Consulta de un juego en el FormBuscarJuego
+        public static void consulta(string query, TextBox id, TextBox titulo, TextBox plataforma, TextBox desarrollador, TextBox genero,
+            TextBox prestado, PictureBox pbImg)
+        {
+            DB.ConsultaJuego(query, DB.conexion, id, titulo, plataforma, desarrollador, genero, prestado, pbImg);
+        }
+
+        //Llenar el datagridView en el control de permisos
+        public static void lLenarDGV(string query, DataGridView dgv)
+        {
+            DB.actualizarTabla(query, dgv);
+        }
+
+        //Ejecutar la consulta y el update
+        public static int CambioUsuario(string query)
+        {
+            int registros = DB.operar(query, DB.conexion);
+            return registros;
+        }
+
+        //LLenar caja de texto con el numero de usuarios
+        public static void CantidadU(TextBox cantidad)
+        {
+            DB.CantidadUsuarios(cantidad);
+        }
+
+        //Consulta de un juego para el Update de juegos en el FormActJuego
+        public static void ConsultaUpdate(string query, TextBox id, TextBox titulo, TextBox plataforma, ComboBox desarrollador,
+            ComboBox genero, PictureBox pbImg)
+        {
+            DB.ConsultaJuegoUpdate(query, DB.conexion, id, titulo, plataforma, desarrollador, genero, pbImg);
+        }
+
+        //Actualizar juego sin cambiar la imagen
+        public static void ActualizarJuegoSinImg(string query)
+        {
+            int registros = DB.operar(query, DB.conexion);
+            if (registros > 0)
+            {
+                MessageBox.Show("Registro Actualizado corrrectamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        //Actualizar juego con nueba imagen
+        public static void ActualizarJuegoConImg(string query, string rutaImagen)
+        {
+            byte[] imagen = ConvertirImagenABinario(rutaImagen);
+            DB.conectar();
+            try
+            {
+                SqlCommand comando = new SqlCommand(query, DB.conexion);
+                comando.Parameters.Add("@Caratula", System.Data.SqlDbType.VarBinary).Value = imagen;
+                int bandera = comando.ExecuteNonQuery();
+                if (bandera > 0)
+                {
+                    MessageBox.Show("Actualización éxitosa", "¡Actualizado correctamente!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo actualizar, intente de nuevo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -152,7 +248,19 @@ namespace ProyectoVideojuegos.Controlador
             }
         }
 
+        public static void EliminarJuego(string query)
+        {
+            int registros = 0;
+            registros = DB.operar(query, DB.conexion);
+            if (registros > 0)
+            {
+                MessageBox.Show("Juego eliminado éxitosamente", "Juego Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("No se pudo eliminar el juego, intente de nuevo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
-
 }
 

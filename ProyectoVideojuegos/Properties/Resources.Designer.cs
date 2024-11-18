@@ -153,6 +153,26 @@ namespace ProyectoVideojuegos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap IcoCerrarSes {
+            get {
+                object obj = ResourceManager.GetObject("IcoCerrarSes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IcoControl {
+            get {
+                object obj = ResourceManager.GetObject("IcoControl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap IcoCreUser {
             get {
                 object obj = ResourceManager.GetObject("IcoCreUser", resourceCulture);
@@ -313,9 +333,39 @@ namespace ProyectoVideojuegos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icoweb {
+            get {
+                object obj = ResourceManager.GetObject("Icoweb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icoweb1 {
+            get {
+                object obj = ResourceManager.GetObject("Icoweb1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap img2 {
             get {
                 object obj = ResourceManager.GetObject("img2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ImgCambioRol {
+            get {
+                object obj = ResourceManager.GetObject("ImgCambioRol", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

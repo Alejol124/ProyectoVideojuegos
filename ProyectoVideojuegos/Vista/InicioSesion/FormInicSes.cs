@@ -52,6 +52,10 @@ namespace ProyectoVideojuegos.View
         private void btnEntrar_MouseEnter(object sender, EventArgs e)
         {
             btnEntrar.BackColor = Color.Indigo;
+            if (General.ApiOK == 0)
+            {
+                General.VerificarAPI();
+            }
         }
 
         private void btnEntrar_MouseLeave(object sender, EventArgs e)

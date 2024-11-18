@@ -106,9 +106,9 @@
             // pbImagen
             // 
             this.pbImagen.BackColor = System.Drawing.Color.White;
-            this.pbImagen.Location = new System.Drawing.Point(411, 122);
+            this.pbImagen.Location = new System.Drawing.Point(409, 108);
             this.pbImagen.Name = "pbImagen";
-            this.pbImagen.Size = new System.Drawing.Size(283, 334);
+            this.pbImagen.Size = new System.Drawing.Size(330, 371);
             this.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImagen.TabIndex = 30;
             this.pbImagen.TabStop = false;
@@ -196,6 +196,7 @@
             // 
             this.cmbGenero.DataSource = this.generoBindingSource;
             this.cmbGenero.DisplayMember = "Nombre";
+            this.cmbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGenero.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbGenero.FormattingEnabled = true;
             this.cmbGenero.Location = new System.Drawing.Point(184, 322);
@@ -218,6 +219,7 @@
             // 
             this.cmbDesarro.DataSource = this.desarrolladorBindingSource;
             this.cmbDesarro.DisplayMember = "NombreEmpresa";
+            this.cmbDesarro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDesarro.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDesarro.FormattingEnabled = true;
             this.cmbDesarro.Location = new System.Drawing.Point(255, 216);
@@ -311,6 +313,7 @@
             this.btnLimpiar.TabIndex = 31;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             this.btnLimpiar.MouseEnter += new System.EventHandler(this.btnLimpiar_MouseEnter);
             this.btnLimpiar.MouseLeave += new System.EventHandler(this.btnLimpiar_MouseLeave);
             // 

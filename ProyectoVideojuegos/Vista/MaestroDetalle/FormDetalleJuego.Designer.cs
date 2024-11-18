@@ -136,6 +136,7 @@
             this.cmbDesarr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(63)))));
             this.cmbDesarr.DataSource = this.desarrolladorBindingSource;
             this.cmbDesarr.DisplayMember = "NombreEmpresa";
+            this.cmbDesarr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDesarr.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDesarr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.cmbDesarr.FormattingEnabled = true;
@@ -173,6 +174,7 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.DesarrolladorTableAdapter = this.desarrolladorTableAdapter;
+            this.tableAdapterManager.GeneroTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = ProyectoVideojuegos.TiendaJuegosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.VideojuegoTableAdapter = this.videojuegoTableAdapter;
             // 

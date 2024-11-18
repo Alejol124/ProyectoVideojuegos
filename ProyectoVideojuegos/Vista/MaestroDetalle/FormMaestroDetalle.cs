@@ -20,7 +20,6 @@ namespace ProyectoVideojuegos.Vista.MaestroDetalle
             dgvPrestamo.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvPrestamo.DefaultCellStyle.Font = new Font("Verdana", 12); // Para las celdas
             dgvPrestamo.ColumnHeadersDefaultCellStyle.Font = new Font("Verdana", 14, FontStyle.Regular);
-            lblRecordatorio.Visible = false;
         }
 
         private void prestamoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -39,15 +38,7 @@ namespace ProyectoVideojuegos.Vista.MaestroDetalle
 
         }
 
-        private void comboBox1_DropDown(object sender, EventArgs e)
-        {
-            lblRecordatorio.Visible = true;
-        }
 
-        private void comboBox1_DropDownClosed(object sender, EventArgs e)
-        {
-            lblRecordatorio.Visible = false;
-        }
 
         private void prestamoBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
         {
@@ -59,12 +50,12 @@ namespace ProyectoVideojuegos.Vista.MaestroDetalle
 
         private void cmbCliente_DropDown(object sender, EventArgs e)
         {
-            lblRecordatorio.Visible = true;
+            
         }
 
         private void cmbCliente_DropDownClosed(object sender, EventArgs e)
         {
-            lblRecordatorio.Visible = false;
+            
         }
     }
 }

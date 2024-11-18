@@ -1,4 +1,5 @@
 ﻿using ProyectoVideojuegos.Vista;
+using ProyectoVideojuegos.Vista.Crud;
 using System;
 using System.Collections.Generic;
 using System.Linq;
