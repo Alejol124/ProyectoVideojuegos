@@ -37,16 +37,17 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.pnlInfo = new System.Windows.Forms.Panel();
+            this.lblFechas = new System.Windows.Forms.Label();
+            this.txtFecEntrega = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtDocumento = new System.Windows.Forms.TextBox();
             this.cmbJuegos = new System.Windows.Forms.ComboBox();
             this.dtpDev = new System.Windows.Forms.DateTimePicker();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnConfirmar = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtFecEntrega = new System.Windows.Forms.TextBox();
             this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tiendaJuegosDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.juegosNoPrestadosBindingSource)).BeginInit();
@@ -121,6 +122,7 @@
             // pnlInfo
             // 
             this.pnlInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(63)))));
+            this.pnlInfo.Controls.Add(this.lblFechas);
             this.pnlInfo.Controls.Add(this.txtFecEntrega);
             this.pnlInfo.Controls.Add(this.label4);
             this.pnlInfo.Controls.Add(this.pictureBox1);
@@ -135,6 +137,49 @@
             this.pnlInfo.Name = "pnlInfo";
             this.pnlInfo.Size = new System.Drawing.Size(1924, 254);
             this.pnlInfo.TabIndex = 20;
+            // 
+            // lblFechas
+            // 
+            this.lblFechas.AutoSize = true;
+            this.lblFechas.BackColor = System.Drawing.Color.Transparent;
+            this.lblFechas.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechas.ForeColor = System.Drawing.Color.White;
+            this.lblFechas.Location = new System.Drawing.Point(535, 197);
+            this.lblFechas.Name = "lblFechas";
+            this.lblFechas.Size = new System.Drawing.Size(748, 28);
+            this.lblFechas.TabIndex = 24;
+            this.lblFechas.Text = "*Los prestamos solo tiene una fecha máxima de dos semanas*";
+            // 
+            // txtFecEntrega
+            // 
+            this.txtFecEntrega.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFecEntrega.Enabled = false;
+            this.txtFecEntrega.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFecEntrega.Location = new System.Drawing.Point(1440, 43);
+            this.txtFecEntrega.Name = "txtFecEntrega";
+            this.txtFecEntrega.Size = new System.Drawing.Size(304, 33);
+            this.txtFecEntrega.TabIndex = 23;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label4.Location = new System.Drawing.Point(1096, 37);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(322, 40);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Fecha de entrega:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoVideojuegos.Properties.Resources.IcoControl;
+            this.pictureBox1.Location = new System.Drawing.Point(31, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(265, 236);
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -204,15 +249,8 @@
             this.dtpDev.Name = "dtpDev";
             this.dtpDev.Size = new System.Drawing.Size(588, 38);
             this.dtpDev.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoVideojuegos.Properties.Resources.IcoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(31, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(265, 236);
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
+            this.dtpDev.CloseUp += new System.EventHandler(this.dtpDev_CloseUp);
+            this.dtpDev.DropDown += new System.EventHandler(this.dtpDev_DropDown);
             // 
             // btnConfirmar
             // 
@@ -227,28 +265,6 @@
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = false;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label4.Location = new System.Drawing.Point(1096, 37);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(322, 40);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "Fecha de entrega:";
-            // 
-            // txtFecEntrega
-            // 
-            this.txtFecEntrega.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtFecEntrega.Enabled = false;
-            this.txtFecEntrega.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFecEntrega.Location = new System.Drawing.Point(1440, 43);
-            this.txtFecEntrega.Name = "txtFecEntrega";
-            this.txtFecEntrega.Size = new System.Drawing.Size(304, 33);
-            this.txtFecEntrega.TabIndex = 23;
             // 
             // btnVolver
             // 
@@ -312,5 +328,6 @@
         private System.Windows.Forms.TextBox txtFecEntrega;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Label lblFechas;
     }
 }

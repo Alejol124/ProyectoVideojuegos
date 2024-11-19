@@ -283,6 +283,7 @@
             this.tsEntregarJ.Name = "tsEntregarJ";
             this.tsEntregarJ.Size = new System.Drawing.Size(251, 30);
             this.tsEntregarJ.Text = "Entregar Juego";
+            this.tsEntregarJ.Click += new System.EventHandler(this.tsEntregarJ_Click);
             // 
             // tsWeb
             // 
@@ -318,6 +319,7 @@
             this.pnlPrincipal.Name = "pnlPrincipal";
             this.pnlPrincipal.Size = new System.Drawing.Size(1647, 576);
             this.pnlPrincipal.TabIndex = 36;
+            this.pnlPrincipal.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlPrincipal_MouseMove);
             // 
             // timerHora
             // 

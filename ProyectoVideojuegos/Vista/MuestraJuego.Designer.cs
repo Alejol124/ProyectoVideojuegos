@@ -197,12 +197,12 @@
             // btnPrestar
             // 
             this.btnPrestar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnPrestar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrestar.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.btnPrestar.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrestar.ForeColor = System.Drawing.Color.White;
-            this.btnPrestar.Location = new System.Drawing.Point(302, 174);
+            this.btnPrestar.Location = new System.Drawing.Point(292, 174);
             this.btnPrestar.Name = "btnPrestar";
-            this.btnPrestar.Size = new System.Drawing.Size(191, 49);
+            this.btnPrestar.Size = new System.Drawing.Size(204, 49);
             this.btnPrestar.TabIndex = 11;
             this.btnPrestar.Text = "Prestar";
             this.btnPrestar.UseVisualStyleBackColor = false;

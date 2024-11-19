@@ -48,3 +48,4 @@ C:\Users\Aleja\source\repos\ProyectoVideojuegos\ProyectoVideojuegos\obj\Debug\Pr
 C:\Users\Aleja\source\repos\ProyectoVideojuegos\ProyectoVideojuegos\obj\Debug\ProyectoVideojuegos.Vista.Crud.FormVerUser.resources
 C:\Users\Aleja\source\repos\ProyectoVideojuegos\ProyectoVideojuegos\obj\Debug\ProyectoVideojuegos.Vista.Crud.FormActJuego.resources
 C:\Users\Aleja\source\repos\ProyectoVideojuegos\ProyectoVideojuegos\obj\Debug\ProyectoVideojuegos.Vista.Crud.FormElimJuego.resources
+C:\Users\Aleja\source\repos\ProyectoVideojuegos\ProyectoVideojuegos\obj\Debug\ProyectoVideojuegos.Vista.Prestamos.FormDevolver.resources

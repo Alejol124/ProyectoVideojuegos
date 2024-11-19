@@ -1,5 +1,6 @@
 ﻿using ProyectoVideojuegos.Vista;
 using ProyectoVideojuegos.Vista.Crud;
+using ProyectoVideojuegos.Vista.Prestamos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace ProyectoVideojuegos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMaestro());
+            Application.Run(new FormInicio());
         }
     }
 }

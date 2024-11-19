@@ -139,5 +139,18 @@ namespace ProyectoVideojuegos.Vista
         {
             General.CargarForm(new FormElimJuego(), pnlPrincipal);
         }
+
+        private void tsEntregarJ_Click(object sender, EventArgs e)
+        {
+            General.CargarForm(new FormDevolver(), pnlPrincipal);
+        }
+
+        private void pnlPrincipal_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (FormVideojuegos.banderaJue == 1)
+            {
+                General.CargarForm(new FormPrestar(), pnlPrincipal);
+            }
+        }
     }
 }

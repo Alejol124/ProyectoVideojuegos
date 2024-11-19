@@ -41,7 +41,7 @@
             // 
             this.dgvUsuario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(63)))));
             this.dgvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuario.Location = new System.Drawing.Point(356, 183);
+            this.dgvUsuario.Location = new System.Drawing.Point(351, 193);
             this.dgvUsuario.Name = "dgvUsuario";
             this.dgvUsuario.RowHeadersWidth = 51;
             this.dgvUsuario.RowTemplate.Height = 24;
@@ -73,12 +73,12 @@
             // txtCant
             // 
             this.txtCant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(63)))));
-            this.txtCant.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCant.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.txtCant.Location = new System.Drawing.Point(12, 230);
+            this.txtCant.Location = new System.Drawing.Point(690, 137);
             this.txtCant.Name = "txtCant";
             this.txtCant.ReadOnly = true;
-            this.txtCant.Size = new System.Drawing.Size(90, 44);
+            this.txtCant.Size = new System.Drawing.Size(90, 35);
             this.txtCant.TabIndex = 17;
             this.txtCant.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -88,7 +88,7 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(63)))));
             this.label3.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label3.Location = new System.Drawing.Point(12, 183);
+            this.label3.Location = new System.Drawing.Point(355, 137);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(329, 34);
             this.label3.TabIndex = 16;

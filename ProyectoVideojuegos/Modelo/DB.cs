@@ -26,6 +26,10 @@ namespace ProyectoVideojuegos.Modelo
         public static int numUsers = 0;
         //Por si no se encuentra nada no seguir con lo demas
         public static int banderaElim = 0;
+        //Para los prestamos cuando hay una violacion del check
+        public static int banderaPrest = 0;
+        //Para verificar que no esté prestado el juego
+        public static int prestado = 0;
 
         public static SqlConnection conectar()
         {
@@ -43,13 +47,13 @@ namespace ProyectoVideojuegos.Modelo
         }
 
         //Consulta de juego para el FormBuscar - Buscar por código/Nombre
-        public static void ConsultaJuego(string conSQL, SqlConnection conector, TextBox id, TextBox titulo,
+        public static void ConsultaJuego(string conSQL, TextBox id, TextBox titulo,
             TextBox plataforma, TextBox desarrollador, TextBox genero, TextBox prestado, PictureBox pbImg)
         {
             try
             {
                 conectar();
-                SqlCommand comando = new SqlCommand(conSQL, conector);
+                SqlCommand comando = new SqlCommand(conSQL, conexion);
                 SqlDataReader tabla = comando.ExecuteReader();
                 if (tabla.Read())
                 {
@@ -75,7 +79,7 @@ namespace ProyectoVideojuegos.Modelo
             }
             finally
             {
-                cerrar(conector);
+                cerrar(conexion);
             }
         }
         public static int operar(string conSQL, SqlConnection conector)
@@ -84,7 +88,7 @@ namespace ProyectoVideojuegos.Modelo
             try
             {
                 conectar();
-                SqlCommand comando = new SqlCommand(conSQL, conector);
+                SqlCommand comando = new SqlCommand(conSQL, conexion);
                 num = comando.ExecuteNonQuery();
                 return num;
             }
@@ -99,7 +103,7 @@ namespace ProyectoVideojuegos.Modelo
             }
             finally
             {
-                cerrar(conector);
+                cerrar(conexion);
             }
             return num;
         }
@@ -159,6 +163,7 @@ namespace ProyectoVideojuegos.Modelo
             }
         }
 
+        //Insert del prestamo
         public static int InsertarPrestamo(string fecPrest, string fecDev, string documento, ComboBox cmbjuego)
         {
             string idJuego = cmbjuego.SelectedValue.ToString();
@@ -173,17 +178,24 @@ namespace ProyectoVideojuegos.Modelo
                 object result = comando.ExecuteScalar();
                 if (result != null)
                 {
+                    banderaPrest = 1;
                     idRegistro = Convert.ToInt32(result);
+                    MessageBox.Show("Id regitro clase DB " + idRegistro);
                 }
+                else
+                {
+                    MessageBox.Show("No se pudo realizar el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex);
+                banderaPrest = 0;
             }
             finally
             {
                 cerrar(conexion);
-                ActualizarPrestado(idJuego);
             }
             return idRegistro;
         }
@@ -212,7 +224,7 @@ namespace ProyectoVideojuegos.Modelo
         {
             DataTable tabla = new DataTable();
             try
-            {
+            {  
                 SqlCommand comando = new SqlCommand(query, conexion);
                 SqlDataAdapter adapter = new SqlDataAdapter(comando);
                 adapter.Fill(tabla);
@@ -259,13 +271,14 @@ namespace ProyectoVideojuegos.Modelo
             }
         }
 
-        public static void ConsultaJuegoUpdate(string conSQL, SqlConnection conector, TextBox id ,TextBox titulo,
+        //Para consultar el juego antes de hacer el update
+        public static void ConsultaJuegoUpdate(string conSQL, TextBox id, TextBox titulo,
             TextBox plataforma, ComboBox desarrollador, ComboBox genero, PictureBox pbImg)
         {
             try
             {
                 conectar();
-                SqlCommand comando = new SqlCommand(conSQL, conector);
+                SqlCommand comando = new SqlCommand(conSQL, conexion);
                 SqlDataReader tabla = comando.ExecuteReader();
                 if (tabla.Read())
                 {
@@ -295,9 +308,66 @@ namespace ProyectoVideojuegos.Modelo
             }
             finally
             {
-                cerrar(conector);
+                cerrar(conexion);
+            }
+        }
+
+        public static void EliminarPrestamo(string titulo, string codPrestamo)
+        {
+            conectar();
+            try
+            {
+                string queryPrestamo = "DELETE FROM Prestamo WHERE PrestamoID = '" + codPrestamo + "'";
+                string queryJuego = "UPDATE Videojuego set Prestado = 'No' WHERE Titulo = '" + titulo + "'";
+                SqlCommand comando = new SqlCommand(queryPrestamo, conexion);
+                SqlCommand comando2 = new SqlCommand(queryJuego, conexion);
+                int c1 = comando.ExecuteNonQuery(), c2 = comando2.ExecuteNonQuery();
+                if (c1 > 0 && c2 > 0)
+                {
+                    MessageBox.Show("Eliminación del registro exitosamente");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+            finally
+            {
+                cerrar(conexion);
+            }
+        }
+
+        public static void VerificarPrestado(string codJuego)
+        {
+            conectar();
+            try
+            {
+                string query = "SELECT Prestado FROM Videojuego WHERE JuegoID = '" + codJuego + "'";
+                SqlCommand comando = new SqlCommand(query,conexion);
+                SqlDataReader tabla = comando.ExecuteReader();
+                if (tabla.Read())
+                {
+                    if (tabla[0].ToString() == "Si")
+                    {
+                        prestado = 1;
+                    }
+                    else
+                    {
+                        prestado = 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+            finally
+            {
+                cerrar(conexion);
             }
         }
     }
 }
+
 

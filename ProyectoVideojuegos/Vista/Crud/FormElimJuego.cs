@@ -87,6 +87,7 @@ namespace ProyectoVideojuegos.Vista.Crud
             {
                 General.EliminarJuego(query);
             }
+            txtID.Clear();
             btnVolver.PerformClick();
         }
     }

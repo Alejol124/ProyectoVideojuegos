@@ -198,6 +198,7 @@
             this.Name = "FormVideojuegos";
             this.Text = "FormVideojuegos";
             this.Load += new System.EventHandler(this.FormVideojuegos_Load);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormVideojuegos_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.generoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tiendaJuegosDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.desarrolladorBindingSource)).EndInit();

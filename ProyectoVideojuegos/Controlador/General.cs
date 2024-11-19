@@ -23,6 +23,8 @@ namespace ProyectoVideojuegos.Controlador
         public static int ApiOK;
         //Docuemnto para relacionarlo a los prestamos
         public static string documento;
+        //Para poder abrir el juego en el prestamo
+        public static int banderaJuegos = 0;
 
         //Método par cargar Form en el panel principal (MENU MDI)
         public static void CargarForm(Form formulario, Panel pnPrincipal)
@@ -172,15 +174,20 @@ namespace ProyectoVideojuegos.Controlador
         //Registro nuevo prestamo
         public static int NuevoPrestamo(string fecPrest, string fecDev, string documento, ComboBox cmbjuego)
         {
-            int registroID = 0;
-            return registroID = DB.InsertarPrestamo(fecPrest, fecDev, documento, cmbjuego);
+            int registroID = DB.InsertarPrestamo(fecPrest, fecDev, documento, cmbjuego);
+            if (DB.banderaPrest == 1)
+            {
+                DB.ActualizarPrestado(cmbjuego.SelectedValue.ToString());
+                return registroID;
+            }
+            return 0;
         }
 
         //Consulta de un juego en el FormBuscarJuego
         public static void consulta(string query, TextBox id, TextBox titulo, TextBox plataforma, TextBox desarrollador, TextBox genero,
             TextBox prestado, PictureBox pbImg)
         {
-            DB.ConsultaJuego(query, DB.conexion, id, titulo, plataforma, desarrollador, genero, prestado, pbImg);
+            DB.ConsultaJuego(query, id, titulo, plataforma, desarrollador, genero, prestado, pbImg);
         }
 
         //Llenar el datagridView en el control de permisos
@@ -206,7 +213,7 @@ namespace ProyectoVideojuegos.Controlador
         public static void ConsultaUpdate(string query, TextBox id, TextBox titulo, TextBox plataforma, ComboBox desarrollador,
             ComboBox genero, PictureBox pbImg)
         {
-            DB.ConsultaJuegoUpdate(query, DB.conexion, id, titulo, plataforma, desarrollador, genero, pbImg);
+            DB.ConsultaJuegoUpdate(query, id, titulo, plataforma, desarrollador, genero, pbImg);
         }
 
         //Actualizar juego sin cambiar la imagen
@@ -248,6 +255,7 @@ namespace ProyectoVideojuegos.Controlador
             }
         }
 
+        //Para eliminar un juego
         public static void EliminarJuego(string query)
         {
             int registros = 0;
@@ -260,6 +268,18 @@ namespace ProyectoVideojuegos.Controlador
             {
                 MessageBox.Show("No se pudo eliminar el juego, intente de nuevo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        //Eliminar un prestamo
+        public static void EliminarPrest(string titulo, string codPrest)
+        {
+            DB.EliminarPrestamo(titulo, codPrest);
+        }
+
+        //Verificar que no esté prestado
+        public static void VerifPrestado(string codJueg)
+        {
+            DB.VerificarPrestado(codJueg);
         }
     }
 }

@@ -19,10 +19,11 @@ namespace ProyectoVideojuegos.Vista.Crud
                "g.Nombre AS Genero, v.Prestado, v.Caratula FROM Videojuego AS v " +
                "INNER JOIN Desarrollador AS d ON d.DesarrolladorID = v.Desarrollador " +
                "INNER JOIN Genero AS g ON g.GeneroID = v.Genero";
+        public static int banderaJue = 0;
         public FormVideojuegos()
         {
-
             InitializeComponent();
+            General.banderaJuegos = 0;
             cmbGenero.Visible = false;
             lblGenero.Visible = false;
             cmbDesarr.Visible = false;
@@ -125,6 +126,15 @@ namespace ProyectoVideojuegos.Vista.Crud
         {
             flpJuegos.Controls.Clear();
             General.CargarJuegoPanel(flpJuegos, queryGeneral);
+        }
+
+        private void FormVideojuegos_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (General.banderaJuegos == 1)
+            {
+                banderaJue = 1;
+                this.Close();
+            }
         }
     }
 }
